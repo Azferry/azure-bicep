@@ -1,0 +1,11 @@
+  {
+    "logAnalyticsWorkspaceIdforVMReporting": {
+      "value": "6bc552c0-0483-49fd-b27e-cbc0a785dc8b"
+    },
+    "listOfMembersToExcludeFromWindowsVMAdministratorsGroup": {
+      "value": "['user1']"
+    },
+    "listOfMembersToIncludeInWindowsVMAdministratorsGroup": {
+      "value": "['user1']"
+    }    
+  }

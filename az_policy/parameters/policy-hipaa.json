@@ -1,0 +1,17 @@
+  {
+    "installedApplicationsOnWindowsVM": {
+      "value": "vscode.exe"
+    },
+    "DeployDiagnosticSettingsforNetworkSecurityGroupsstoragePrefix": {
+      "value": "rg-core-infa-001"
+    },
+    "DeployDiagnosticSettingsforNetworkSecurityGroupsrgName": {
+      "value": "stmceeus2coreprd001"
+    },
+    "CertificateThumbprints": {
+      "value": "yourThumbprint"
+    },
+    "membersToExclude": {
+      "value": "user@email.com"
+    }    
+  }

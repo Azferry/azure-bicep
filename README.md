@@ -1,8 +1,20 @@
-# azure_bicep
-Example Bicep templates to get started.
+# Azure Bicep
+Getting started with Azure Bicep
 
 # How to Run Bicep 
 
+## Resource Group
+``` 
+az deployment group create --name RgDeployment --location "centralus" --resource-group "RGNAME" --template-file .\main.bicep 
+```
+## Subscription
+```
+az deployment sub create --name SubDeployment --location "centralus" --template-file .\main.bicep
+```
+## Management Group
+```
+az deployment mg create --name PolicyDeployment --location "centralus" --management-group-id "managementGroup" --template-file .\main.bicep
+```
 
 # Convert Bicep
 ## Convert Bicep to ARM 

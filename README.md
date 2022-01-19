@@ -1,6 +1,21 @@
 # Azure Bicep
-Getting started with Azure Bicep
+Infrastructure as code is the process of automating your infrastructure provisioning. Bicep is a Resource Manager template language that's used to declaratively deploy Azure resources. This repository can be used to help get started deploying resouces in Bicep.
 
+
+## Useful Links
+* [Microsoft Bicep Documenation](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/)
+* [Install Bicep Tools](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/install)
+* [MS Learning Modules](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/learn-bicep)
+
+## ARM Control Plane
+Azure control plan manages requests sent by client interface (Powershell, Azure CLI, RestApi, Or Portal). When the request is sent the Azure Resource Provider takes the request action. The control plane handles what resources need to be created and which already exist. Since the resource manager understands the current environment, it wont create identical resources or delete existing resoruces.
+
+![ARM Control Plane](./doc_imgs/azure-resource-manager.png)
+
+## How Bicep Works
+Bicep takes the configuration and converts it to an ARM resource template. ARM is used as an intermediate language used to submit the converted bicep file to the Resource Manager
+
+![ARM Control Plane](./doc_imgs/bicep-to-json.png)
 # Run Bicep using AZ CLI
 
 ## Resource Group

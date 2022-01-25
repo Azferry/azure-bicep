@@ -1,7 +1,7 @@
 targetScope = 'subscription'
 
 /*
-  This Bicep file deployes a resource group with the required tags.
+  This Bicep file deployes a resource group with the required tags and default resouces.
 
   This Bicep file assumes az cli is set to the right account. 
     Check current account - az account show

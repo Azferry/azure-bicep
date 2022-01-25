@@ -20,11 +20,10 @@ param functionWorkerRuntime string = 'node'
 ])
 param storageAccountType string = 'Standard_LRS'
 
-// @description('The name of the virtual network to be created.')
-// param vnetName string = 'vnet-${uniqueString(resourceGroup().id)}'
-
-// @description('The name of the subnet to be created within the virtual network.')
+@description('The name of the subnet to attach the app service to.')
 param subnetName string = 'snet-functionapp2'
+
+@description('The name of the virtual network to attach the app servive to.')
 param existingVnetName string = 'vnet-zntant5t2n43m'
 
 // var vnetAddressPrefix = '10.0.0.0/16'

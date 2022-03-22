@@ -36,7 +36,7 @@ az deployment group create --resource-group <resource-group-name> --template-fil
 az deployment sub create --location <location> --template-file <path-to-bicep>
 ```
 
-## Tenant
+## Management Group
 
 ```powershell
 az deployment mg create --location <location> --template-file <path-to-bicep> --management-group-id  <MG_GroupID>

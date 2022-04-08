@@ -1,5 +1,7 @@
 /*
-
+Description: Deploys a sql server and database
+Scope: Resource group
+Role requirements: SQL DB Contributor, SQL Server Contributor
 Deployment:
 az deployment group create --name ExampleDeployment --resource-group 'rg001' --template-file  'basicdb-main.bicep' --parameters 'basicdb.parameters.json'
 */

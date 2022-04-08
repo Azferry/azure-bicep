@@ -1,0 +1,55 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "sqlName": {
+            "value": "test-wus2-sql452"
+        },
+        "sqlAdministratorLogin": {
+            "value": "dbsqladmin"
+        },
+        "setAADAdmins": {
+            "value": true
+        },
+        "azureADOnlyAuthentication": {
+            "value": false
+        },
+        "principalType": {
+            "value": "Group"
+        },
+        "login": {
+            "value": "janedoe"
+        },
+        "sid": {
+            "value": "aad-objectid"
+        },
+        "tenantId": {
+            "value": "aad-tenantid"
+        },
+        "sqlDatabases": {
+            "value": [
+                {
+                    "name": "dbaAdmin1",
+                    "licenseType": "BasePrice",
+                    "sampleName": "",
+                    "dbShortTermRetentionDays": 7,
+                    "dbDiffBackupIntervalInHours": 12,
+                    "monthlyRetention": "P4W",
+                    "weeklyRetention": "P2W",
+                    "weekOfYear": 1,
+                    "yearlyRetention": "P6M",
+                    "skuName": "Standard",
+                    "skuTier": "Standard",
+                    "skuFamily": "",
+                    "skuCapacity": 10
+                }
+            ]
+        },
+        "sqlDBTags": {
+            "value": {
+                    "Environment": "Dev",                    
+                    "ApplicationName": "Sandbox"
+                }
+        }
+    }
+}

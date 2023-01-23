@@ -57,9 +57,10 @@ The release runs the bicep code and takes the input from the pipeline
    1. Pram
    2. Working Directory
    
-    '''
-    Test
-    '''
+    ```
+    $(System.DefaultWorkingDirectory)/_InfastructureAsCode/drop
+    ```
+
     <img src="/doc_imgs/task-workingdir.png" width="500" />
 
 

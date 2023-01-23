@@ -11,10 +11,13 @@
 3. Under Pipelines > Create new Pipeline
    1. Select where the code is (Azure repos or github)
    <img src="/doc_imgs/pipeline-step2.png" width="500" />
+
    2. Select Repository
    <img src="/doc_imgs/pipeline-step3.png" width="500" />
+
    3. Configure the pipeline with the existing ymal file
    <img src="/doc_imgs/pipeline-step4.png" width="500" />
+
    4. Run the pipeline
    <img src="/doc_imgs/pipeline-step5.png" width="500" />
 

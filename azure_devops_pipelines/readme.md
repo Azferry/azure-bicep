@@ -12,13 +12,13 @@
    1. Create new Pipeline
    ![Pipeline-S1](/doc_imgs/pipeline-step1.png)
    2. Select where the code is (Azure repos or github)
-   ![Pipeline-S2](.\img\pipeline-step2.png)
+   ![Pipeline-S2](/doc_imgs/pipeline-step2.png)
    3. Select Repository
-   ![Pipeline-S3](.\img\pipeline-step3.png)
+   ![Pipeline-S3](/doc_imgs/pipeline-step3.png)
    4. Configure the pipeline with the existing ymal file
-   ![Pipeline-S4](.\img\pipeline-step4.png)
+   ![Pipeline-S4](/doc_imgs/pipeline-step4.png)
    5. Run the pipeline
-   ![Pipeline-S5](.\img\pipeline-step5.png)
+   ![Pipeline-S5](/doc_imgs/pipeline-step5.png)
 
 [snowflake][gh-snowflake]
 

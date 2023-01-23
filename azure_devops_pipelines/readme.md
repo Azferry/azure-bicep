@@ -38,15 +38,29 @@ The service connection allows the authentication to Azure.
 The release runs the bicep code and takes the input from the pipeline
 
 1. Navigate to the release section under pipelines
-2. Create new release pipeline
+2. Add environmental variables
+
+   <img src="/doc_imgs/rcp-envvar.png" width="1000" />
+3. Create new release pipeline
    
    <img src="/doc_imgs/rcp-s2.png" width="500" />
-3. Configure Artifact
+4. Configure Artifact
    
    <img src="/doc_imgs/rcp-s3.png" width="500" />
+
    1. Add the artifact from the pipeline
    2. Create a new stage for the bicep task
-
+5. Add AzurePowershell build task
+   
+   <img src="/doc_imgs/rcp-stage-task-bicep.png" width="500" />
+6. Configure Task
+   1. Pram
+   2. Working Directory
+   
+    '''
+    Test
+    '''
+    <img src="/doc_imgs/task-workingdir.png" width="500" />
 
 
 

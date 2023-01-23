@@ -23,12 +23,11 @@
 The service connection allows the authentication to Azure.
 
 1. Navigate to project settings
-![ServiceConn-s1](/doc_imgs/ServiceConn-s1.png)
-2. Select Service Connections > New Connection
 <img src="/doc_imgs/ServiceConn-s1.png" width="500" />
-
-3. Select "Azure Resource Manager" > Chose Authentication method
-   1. Service Principle (Automatic) - will create and assign the role 
+1. Select Service Connections > New Connection
+<img src="/doc_imgs/ServiceConn-s2.png" width="500" />
+1. Select "Azure Resource Manager" > Chose Authentication method
+   1. Service Principle (Automatic) - will create and assign the role
 
 ### Create Release
 

@@ -31,8 +31,7 @@ The service connection allows the authentication to Azure.
 2. Select Service Connections > New Connection
 <img src="/doc_imgs/ServiceConn-s2.png" width="500" />
 
-3. Select "Azure Resource Manager" > Chose Authentication method
-   1. Service Principle (Automatic) - will create and assign the role
+3. Select "Azure Resource Manager" > Pick which way you would like to authenticate with Azure
 
 ### Create Release
 
@@ -42,7 +41,11 @@ The release runs the bicep code and takes the input from the pipeline
 2. Create new release pipeline
    <img src="/doc_imgs/rcp-s2.png" width="500" />
 
-3. 
+3. Configure Artifact
+   <img src="/doc_imgs/rcp-s3.png" width="500" />
+
+   1. Add the artifact from the pipeline
+   2. Create a new stage for the bicep task
 
 
 

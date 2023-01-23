@@ -54,8 +54,12 @@ The release runs the bicep code and takes the input from the pipeline
    
    <img src="/doc_imgs/rcp-stage-task-bicep.png" width="500" />
 6. Configure Task
-   1. Pram
-   2. Working Directory
+
+   <img src="/doc_imgs/task-config.png" width="500" />
+
+   1. Select the azure subscription service connection
+   2. Set the script path and arguments
+   3. Under the advanced dropdown set the working directory
    
     ```
     $(System.DefaultWorkingDirectory)/_InfastructureAsCode/drop

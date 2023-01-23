@@ -10,7 +10,7 @@
 2. Under repos > initialize repository and commit the source files (main.bicep and run.ps1)
 3. Under Pipelines
    1. Create new Pipeline
-   ![Pipeline-S1](.\img\pipeline-step1.png)
+   ![Pipeline-S1](/doc_imgs/pipeline-step1.png)
    2. Select where the code is (Azure repos or github)
    ![Pipeline-S2](.\img\pipeline-step2.png)
    3. Select Repository

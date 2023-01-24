@@ -51,7 +51,7 @@ The release runs the bicep code and takes the input from the pipeline
    <img src="/doc_imgs/rcp-s3.png" width="500" />
 
    1. Add the artifact from the pipeline
-   2. Create a new stage for the bicep task
+   2. Create a new stage by selecting empty job
 5. Add AzurePowershell build task
    
    <img src="/doc_imgs/rcp-stage-task-bicep.png" width="500" />

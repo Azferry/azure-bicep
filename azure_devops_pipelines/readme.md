@@ -46,7 +46,7 @@ The release runs the bicep code and takes the input from the pipeline
 1. Navigate to the release section under pipelines
 2. Add environmental variables
  
-    >[!TIP]
+    >**TIP**
     >
     > Use Variable groups to store values and secrets that you might want available across multiple pipelines. You can share and use variable groups in multiple pipelines in the same project.
 

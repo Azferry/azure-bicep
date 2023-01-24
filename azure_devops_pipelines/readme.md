@@ -4,6 +4,10 @@
 
 Using Azure devops to provision resources triggered by an external system.
 
+Options when setting up pipelines 
+Few different ways 
+Create a build pipeline that creates/publishes the artifacts and a release to deploy
+
 ## Setup Azure Devops
 
 ### Create the pipeline and repo
@@ -41,21 +45,25 @@ The release runs the bicep code and takes the input from the pipeline
 
 1. Navigate to the release section under pipelines
 2. Add environmental variables
+ 
+    >[!TIP]
+    >
+    > Use Variable groups to store values and secrets that you might want available across multiple pipelines. You can share and use variable groups in multiple pipelines in the same project.
 
    <img src="/doc_imgs/rcp-envvar.png" width="1000" />
 3. Create new release pipeline
    
    <img src="/doc_imgs/rcp-s2.png" width="500" />
-4. Configure Artifact
+4. Configure the pipeline by adding the artifact and the powershell stage
    
    <img src="/doc_imgs/rcp-s3.png" width="500" />
 
-   1. Add the artifact from the pipeline
-   2. Create a new stage by selecting empty job
+   1. Select the + on the artifact box, pick the source pipeline that builds the artifact
+   2. Select the + on the stage box, select empty job at the top
 5. Add AzurePowershell build task
    
    <img src="/doc_imgs/rcp-stage-task-bicep.png" width="500" />
-6. Configure Task
+6. Configure the stage
 
    <img src="/doc_imgs/task-config.png" width="500" />
 
@@ -69,9 +77,10 @@ The release runs the bicep code and takes the input from the pipeline
     ## Arguments 
     -AzRegion $env:AzRegion -BuChargeBackCode $env:BuChargeBackCode -AzRgPrefix $env:AzRgPrefix
     ```
+
    3. Under the advanced dropdown set the working directory
    
-    ```
+    ```powershell
     $(System.DefaultWorkingDirectory)/_InfastructureAsCode/drop
     ```
 

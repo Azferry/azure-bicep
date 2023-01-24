@@ -2,6 +2,8 @@
 
 ## Overview
 
+Using Azure devops to provision resources triggered by an external system.
+
 ## Setup Azure Devops
 
 ### Create the pipeline and repo
@@ -59,6 +61,14 @@ The release runs the bicep code and takes the input from the pipeline
 
    1. Select the azure subscription service connection
    2. Set the script path and arguments
+
+    ```powershell
+    ## Script Path
+    $(System.DefaultWorkingDirectory)/_InfastructureAsCode/drop/run.ps1
+
+    ## Arguments 
+    -AzRegion $env:AzRegion -BuChargeBackCode $env:BuChargeBackCode -AzRgPrefix $env:AzRgPrefix
+    ```
    3. Under the advanced dropdown set the working directory
    
     ```
@@ -67,7 +77,11 @@ The release runs the bicep code and takes the input from the pipeline
 
     <img src="/doc_imgs/task-workingdir.png" width="500" />
 
+## Trigger the release
 
+### Manual Trigger in Azure Devops
+
+### RestAPI
 
 <!--- Link Ref --->
 <!-- [snowflake][gh-snowflake] -->

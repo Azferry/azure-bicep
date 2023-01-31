@@ -2,7 +2,7 @@
 
 ## Overview
 
-For IT organizations that need to deploy Azure resources from a ticketing systems. Integrating Azure Pipelines in to your service flow for a ticket is one option to speed up provisioning of standard resources or landing zones. Below shows one possible option using Bicep templates and triggered by a rest api.
+For IT organizations that need to deploy Azure resources from a ticketing systems. Integrating Azure Pipelines in to your service flow for a ticket is one option to speed up provisioning of standard resources or landing zones. Below shows one possible option using Bicep templates.
 
 ## Setup Azure Devops
 

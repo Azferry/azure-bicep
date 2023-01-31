@@ -2,7 +2,7 @@
 
 ## Overview
 
-Using Azure devops to provision resources triggered by an external system.
+For IT organizations that need to deploy Azure resources from a ticketing systems. Integrating Azure Pipelines in to your service flow for a ticket is one option to speed up provisioning of standard resources or landing zones. Below shows one possible option using Bicep templates.
 
 ## Setup Azure Devops
 
@@ -41,21 +41,26 @@ The release runs the bicep code and takes the input from the pipeline
 
 1. Navigate to the release section under pipelines
 2. Add environmental variables
+ 
+    >**TIP**
+    > Use Variable groups to store values and secrets that you might want available across multiple pipelines. You can share and use variable groups in multiple pipelines in the same project.
+    
+   1. Variables to add (AzRegion, AzRgPrefix, BuChargeBackCode), Check the box for 'Settable at Release'
 
    <img src="/doc_imgs/rcp-envvar.png" width="1000" />
 3. Create new release pipeline
    
    <img src="/doc_imgs/rcp-s2.png" width="500" />
-4. Configure Artifact
+4. Configure the pipeline by adding the artifact and the powershell stage
    
    <img src="/doc_imgs/rcp-s3.png" width="500" />
 
-   1. Add the artifact from the pipeline
-   2. Create a new stage by selecting empty job
+   1. Select the + on the artifact box, pick the source pipeline that builds the artifact
+   2. Select the + on the stage box, select empty job at the top
 5. Add AzurePowershell build task
    
    <img src="/doc_imgs/rcp-stage-task-bicep.png" width="500" />
-6. Configure Task
+6. Configure the stage
 
    <img src="/doc_imgs/task-config.png" width="500" />
 
@@ -69,9 +74,10 @@ The release runs the bicep code and takes the input from the pipeline
     ## Arguments 
     -AzRegion $env:AzRegion -BuChargeBackCode $env:BuChargeBackCode -AzRgPrefix $env:AzRgPrefix
     ```
+
    3. Under the advanced dropdown set the working directory
    
-    ```
+    ```powershell
     $(System.DefaultWorkingDirectory)/_InfastructureAsCode/drop
     ```
 
@@ -79,11 +85,25 @@ The release runs the bicep code and takes the input from the pipeline
 
 ## Trigger the release
 
+Options for triggering the pipeline
+
+1. Manually in the Azure Devops Portal
+2. Logic Apps - using the plugin for azure devops
+3. Azure Rest API
+
 ### Manual Trigger in Azure Devops
+
+1. Under the Azure DevOps Project navigate to the release section > select new release
+
+   <img src="/doc_imgs/pipeline-cr-release1.png" width="500" />
+2. On the new release section fill out the variables to be passed > select create
+
+   <img src="/doc_imgs/pipeline-cr-release2.png" width="500" />
 
 ### RestAPI
 
+To integrate with external systems you can trigger a release from the [Azure Rest API][restapi-releasecreate]
+
 <!--- Link Ref --->
-<!-- [snowflake][gh-snowflake] -->
-<!-- [gh-snowflake]: https://github.com/twitter-archive/snowflake -->
+[restapi-releasecreate]: https://learn.microsoft.com/en-us/rest/api/azure/devops/release/releases/create?view=azure-devops-rest-7.0&tabs=HTTP
 <!--- Link Ref --->

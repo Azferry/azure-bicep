@@ -47,8 +47,9 @@ The release runs the bicep code and takes the input from the pipeline
 2. Add environmental variables
  
     >**TIP**
-    >
     > Use Variable groups to store values and secrets that you might want available across multiple pipelines. You can share and use variable groups in multiple pipelines in the same project.
+    
+   1. Variables to add (AzRegion, AzRgPrefix, BuChargeBackCode), Check the box for 'Settable at Release'
 
    <img src="/doc_imgs/rcp-envvar.png" width="1000" />
 3. Create new release pipeline
@@ -92,7 +93,9 @@ The release runs the bicep code and takes the input from the pipeline
 
 ### RestAPI
 
+To integrate with external systems you can trigger a release from the [Azure Rest API][restapi-releasecreate]
+
+
 <!--- Link Ref --->
-<!-- [snowflake][gh-snowflake] -->
-<!-- [gh-snowflake]: https://github.com/twitter-archive/snowflake -->
+[restapi-releasecreate]: https://learn.microsoft.com/en-us/rest/api/azure/devops/release/releases/create?view=azure-devops-rest-7.0&tabs=HTTP
 <!--- Link Ref --->

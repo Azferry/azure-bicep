@@ -2,11 +2,7 @@
 
 ## Overview
 
-Using Azure devops to provision resources triggered by an external system.
-
-Options when setting up pipelines 
-Few different ways 
-Create a build pipeline that creates/publishes the artifacts and a release to deploy
+For IT organizations that need to deploy Azure resources from a ticketing systems. Integrating Azure Pipelines in to your service flow for a ticket is one option to speed up provisioning of standard resources or landing zones. Below shows one possible option using Bicep templates and triggered by a rest api.
 
 ## Setup Azure Devops
 
@@ -89,12 +85,24 @@ The release runs the bicep code and takes the input from the pipeline
 
 ## Trigger the release
 
+Options for triggering the pipeline
+
+1. Manually in the Azure Devops Portal
+2. Logic Apps - using the plugin for azure devops
+3. Azure Rest API
+
 ### Manual Trigger in Azure Devops
+
+1. Under the Azure DevOps Project navigate to the release section > select new release
+
+   <img src="/doc_imgs/pipeline-cr-release1.png" width="500" />
+2. On the new release section fill out the variables to be passed > select create
+
+   <img src="/doc_imgs/pipeline-cr-release2.png" width="500" />
 
 ### RestAPI
 
 To integrate with external systems you can trigger a release from the [Azure Rest API][restapi-releasecreate]
-
 
 <!--- Link Ref --->
 [restapi-releasecreate]: https://learn.microsoft.com/en-us/rest/api/azure/devops/release/releases/create?view=azure-devops-rest-7.0&tabs=HTTP
